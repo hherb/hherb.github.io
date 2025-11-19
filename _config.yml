@@ -1,0 +1,8 @@
+title: "hherb — Devlog"
+description: "Blog & notes about my repositories"
+url: "https://hherb.github.io"
+baseurl: ""
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
