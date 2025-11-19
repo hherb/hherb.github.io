@@ -1,3 +1,4 @@
+layout: post title: "BMLibrarian Developer Quickstart & Plugin Developer Manual" date: 2025-11-19 07:49:32 +0000
 # BMLibrarian Developer Quickstart & Plugin Developer Manual
 
 **Version:** 1.0
