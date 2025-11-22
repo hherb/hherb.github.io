@@ -1,0 +1,348 @@
+---
+---
+
+// Custom variables (before importing Minima)
+$brand-color: #2563eb;
+$brand-color-light: lighten($brand-color, 40%);
+$brand-color-dark: darken($brand-color, 20%);
+
+$text-color: #1f2937;
+$background-color: #fafafa;
+$code-background-color: #1e293b;
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$base-font-size: 17px;
+$base-line-height: 1.7;
+
+$spacing-unit: 32px;
+
+$table-text-align: left;
+
+// Import Minima
+@import "minima";
+
+// Custom styles
+
+// Smooth scrolling & base improvements
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+// Enhanced header
+.site-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  border-bottom: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  .site-title {
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+  }
+
+  .site-nav {
+    .page-link {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      background-color: #1e3a5f;
+      border-color: rgba(255, 255, 255, 0.2);
+
+      .menu-icon > svg path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+// Page content wrapper
+.page-content {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+// Post list styling (home page)
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .post-meta {
+    font-size: 0.85em;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+
+  .post-link {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: $text-color;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Post content styling
+.post-header {
+  margin-bottom: 32px;
+
+  .post-title {
+    font-size: 2.4em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: $text-color;
+  }
+
+  .post-meta {
+    color: #6b7280;
+    font-size: 0.95em;
+  }
+}
+
+.post-content {
+  h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 32px;
+    color: #374151;
+  }
+
+  h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #4b5563;
+  }
+
+  p {
+    margin-bottom: 1.25em;
+  }
+
+  ul, ol {
+    margin-bottom: 1.25em;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid $brand-color;
+    background: #f1f5f9;
+    padding: 16px 20px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: normal;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $brand-color;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $brand-color;
+    }
+  }
+}
+
+// Code blocks - modern dark theme
+pre, code {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+code {
+  background: #e2e8f0;
+  color: #0f172a;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+pre {
+  background: $code-background-color;
+  border-radius: 10px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #334155;
+
+  code {
+    background: transparent;
+    color: #e2e8f0;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// Syntax highlighting improvements
+.highlight {
+  background: $code-background-color;
+  border-radius: 10px;
+  margin-bottom: 24px;
+
+  pre {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  // Token colors for dark theme
+  .c, .c1, .cm { color: #6b7280; } // Comments
+  .k, .kd, .kn { color: #c084fc; } // Keywords
+  .s, .s1, .s2 { color: #34d399; } // Strings
+  .n { color: #e2e8f0; } // Names
+  .nf, .nx { color: #60a5fa; } // Functions
+  .nc { color: #fbbf24; } // Classes
+  .o { color: #94a3b8; } // Operators
+  .mi, .mf { color: #fb923c; } // Numbers
+  .p { color: #94a3b8; } // Punctuation
+  .na { color: #a5b4fc; } // Attributes
+  .nb { color: #2dd4bf; } // Builtins
+}
+
+// Tables
+table {
+  width: 100%;
+  margin-bottom: 24px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  th {
+    background: #f1f5f9;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover {
+    background: #f8fafc;
+  }
+}
+
+// Footer
+.site-footer {
+  background: #1e293b;
+  color: #94a3b8;
+  border-top: none;
+  padding: 40px 0;
+
+  .footer-heading {
+    color: #ffffff;
+  }
+
+  a {
+    color: #60a5fa;
+
+    &:hover {
+      color: #93c5fd;
+    }
+  }
+
+  .contact-list,
+  .social-media-list {
+    li {
+      color: #94a3b8;
+    }
+  }
+
+  .social-media-list {
+    .svg-icon {
+      fill: #94a3b8;
+    }
+
+    a:hover .svg-icon {
+      fill: #60a5fa;
+    }
+  }
+}
+
+// Page titles
+.page-heading {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+// Home intro section
+.home {
+  .page-heading {
+    display: none;
+  }
+}
+
+// Selection color
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer {
+    background: none;
+    color: $text-color;
+  }
+}

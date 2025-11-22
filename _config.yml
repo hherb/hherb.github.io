@@ -1,8 +1,38 @@
 title: "hherb — Devlog"
-description: "Blog & notes about my repositories"
+description: "Developer notes, tutorials, and updates from Horst Herb's open source projects"
 url: "https://hherb.github.io"
 baseurl: ""
 theme: minima
+
+# Author information
+author:
+  name: Horst Herb
+  email: ""
+
+# Social links (shown in footer)
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/hherb" }
+
+# Show excerpts on homepage
+show_excerpts: true
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Markdown processing
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
